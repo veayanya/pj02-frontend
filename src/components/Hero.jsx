@@ -32,6 +32,16 @@ export default function Hero({ serverMode, tools, children }) {
         Ubah PDF, Word, PowerPoint, HTML, dan EPUB langsung dari browser. Cepat, rapi, dan hasilnya siap pakai.
       </p>
 
+      <a
+        href="https://ig-save-by-eva.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="ig-banner-link"
+      >
+        <span className="ig-banner-badge">REKOMENDASI</span>
+        <span>📸 Butuh pengunduh video Instagram? Buka <strong>IG Save by Eva</strong> &rarr;</span>
+      </a>
+
       {children}
 
       <div className="supported">

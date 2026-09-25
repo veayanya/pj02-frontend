@@ -425,6 +425,132 @@ footer {
   font-size: 12px;
 }
 
+.easy-mode-box {
+  margin-bottom: 20px;
+}
+
+.easy-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  color: var(--violet);
+  background: #f0edff;
+  border-radius: 6px;
+  padding: 4px 10px;
+  margin-bottom: 12px;
+}
+
+.easy-steps-list {
+  margin: 14px 0 20px 20px;
+  padding: 0;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.easy-steps-list li {
+  margin-bottom: 10px;
+}
+
+.btn-download-official {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(120deg, var(--green), #249e62);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px -6px rgba(47, 189, 118, 0.4);
+  transition: all .2s ease;
+}
+
+.btn-download-official:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px -6px rgba(47, 189, 118, 0.6);
+  color: #fff;
+}
+
+.auto-detect-banner {
+  background: #eefcf4;
+  border: 1px solid #c6f6d5;
+  color: #22543d;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
+.dev-mode-details {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  margin-top: 20px;
+}
+
+.dev-mode-details summary {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  cursor: pointer;
+  user-select: none;
+}
+
+.dev-mode-details summary:hover {
+  color: var(--violet);
+}
+
+.nav-ig-btn {
+  background: linear-gradient(120deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  padding: 8px 16px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 14px -3px rgba(220, 39, 67, 0.4);
+  transition: all .2s ease !important;
+}
+
+.nav-ig-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px -3px rgba(220, 39, 67, 0.6);
+  opacity: .95;
+}
+
+.ig-banner-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 10px 20px;
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 28px;
+  box-shadow: 0 6px 20px -6px rgba(23, 22, 42, 0.08);
+  transition: all .2s ease;
+}
+
+.ig-banner-link:hover {
+  border-color: #dc2743;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -6px rgba(220, 39, 67, 0.25);
+}
+
+.ig-banner-badge {
+  background: linear-gradient(120deg, #f09433, #dc2743);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 999px;
+  letter-spacing: .05em;
+}
+
 @media (max-width: 850px) {
   .tutor-steps-grid {
     grid-template-columns: repeat(2, 1fr);
