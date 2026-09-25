@@ -4,7 +4,9 @@ export async function pollAndDownload(jobId, onUpdate) {
   const poll = async () => {
     const res = await fetch(apiUrl(`/api/convert?id=${jobId}`));
 
-    if (res.ok && res.headers.get("Content-Type") !== "application/json") {
+    const contentType = res.headers.get("Content-Type") || "";
+
+    if (res.ok && !contentType.includes("application/json")) {
       // File sudah siap — mulai unduh
       const blob = await res.blob();
       const disposition = res.headers.get("Content-Disposition") ?? "";
