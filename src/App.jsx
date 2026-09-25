@@ -5,6 +5,7 @@ import ModeSelector from "./components/ModeSelector.jsx";
 import DropZone from "./components/DropZone.jsx";
 import JobQueue from "./components/JobQueue.jsx";
 import Steps from "./components/Steps.jsx";
+import LibreOfficeGuide from "./components/LibreOfficeGuide.jsx";
 import Footer from "./components/Footer.jsx";
 import { FORMAT_GROUPS, ALL_MODES } from "./constants.js";
 import { apiFetch, apiPostForm } from "./api.js";
@@ -160,6 +161,8 @@ export default function App() {
       </Hero>
 
       <Steps />
+
+      <LibreOfficeGuide />
 
       {serverMode === "landing" && (
         <div className="info-section">

@@ -7,6 +7,7 @@ export default function Navbar() {
       </a>
       <nav>
         <a href="#cara-pakai">Cara Pakai</a>
+        <a href="#tutor-libreoffice">Instal LibreOffice</a>
       </nav>
     </header>
   );

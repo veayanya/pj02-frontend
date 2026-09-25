@@ -296,3 +296,143 @@ footer {
 
 /* ─── MODE SWITCHING ─── */
 .app-shell[data-mode="loading"] .convert-card { opacity: .5; pointer-events: none; }
+
+/* ─── TUTORIAL LIBREOFFICE ─── */
+.section-sub {
+  color: var(--ink-soft);
+  max-width: 620px;
+  margin: 10px auto 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.tutor-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.tutor-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 13px;
+  transition: all .2s ease;
+}
+
+.tutor-tab:hover {
+  border-color: var(--violet);
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.tutor-tab-active {
+  background: linear-gradient(120deg, var(--pink), var(--violet));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 8px 20px -6px rgba(108, 93, 211, 0.4);
+}
+
+.tab-chip {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(23, 22, 42, 0.08);
+  color: inherit;
+}
+
+.tutor-tab-active .tab-chip {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.tutor-content-card {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--paper);
+  padding: 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 10px 30px -10px var(--line-strong);
+}
+
+.tutor-panel h3 {
+  margin: 0 0 10px;
+  font-family: Sora, sans-serif;
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.tutor-panel p {
+  margin: 0 0 16px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.code-block {
+  background: #1e1b2e;
+  border-radius: 12px;
+  padding: 18px 22px;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-block pre {
+  margin: 0;
+  color: #e2e8f0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.tutor-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.tutor-step-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--paper);
+  transition: transform .2s ease;
+}
+
+.tutor-step-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--violet);
+}
+
+.tutor-step-card h3 {
+  margin: 16px 0 6px;
+  font-family: Sora, sans-serif;
+  font-size: 15px;
+}
+
+.tutor-step-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+@media (max-width: 850px) {
+  .tutor-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .tutor-steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
