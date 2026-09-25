@@ -80,7 +80,11 @@ export default function App() {
       setJobs(initialJobs);
       setGlobalStatus("processing");
 
-      await Promise.all(jobIds.map((jobId) => pollAndDownload(jobId, (status, err) => updateJob(jobId, status, err))));
+      await Promise.all(
+        jobIds.map((jobId, i) =>
+          pollAndDownload(jobId, (status, err) => updateJob(jobId, status, err), files[i]?.name, currentMode.to)
+        )
+      );
 
       setGlobalStatus("done");
     } catch (err) {
