@@ -1,44 +1,45 @@
-# Konversin Frontend
+# iLovePDF Clone — Frontend (Vue 3 + Vite)
 
-UI Konversin (dulunya "Personal Doc Converter"), dibangun ulang dengan Vite + React,
-tampilannya mengikuti gaya visual InstaSave (kartu bulat, gradasi pink→coral,
-badge status server, font Sora untuk judul + Inter untuk isi).
+UI untuk 24 tool PDF (merge, split, compress, watermark, rotate, protect, unlock,
+repair, PDF↔JPG, image→PDF, office→PDF, html→PDF, PDF/A, OCR, extract text,
+markdown, translate, summarize, form detect, edit & sign). Semua pemrosesan file
+dilakukan oleh backend terpisah (Node/Express) yang memanggil iLovePDF API — frontend
+ini tidak pernah menyimpan API key.
 
-Frontend ini murni tampilan — semua proses konversi file dilakukan oleh
-**konversin-backend** yang di-deploy terpisah (lihat folder `konversin-backend`).
+Deploy target: **Vercel**.
 
-## Jalankan lokal
+## 1. Jalankan lokal
 
 ```bash
+cp .env.example .env
+# isi VITE_API_URL dengan URL backend (lokal atau Render)
 npm install
-cp .env.example .env   # lalu isi VITE_API_URL ke backend lokal/Render kamu
 npm run dev
+# jalan di http://localhost:5173
 ```
 
-## Deploy ke Vercel
+Pastikan backend (repo terpisah) sudah jalan dan `CORS_ORIGIN` di backend mengizinkan
+origin frontend ini.
 
-1. Push folder ini ke repo GitHub sendiri (terpisah dari backend).
-2. Import project di Vercel → framework otomatis terdeteksi sebagai **Vite**.
-3. Set environment variable `VITE_API_URL` ke URL backend Render kamu, misalnya
-   `https://konversin-backend.onrender.com` (tanpa trailing slash).
-4. Deploy. Setelah backend & frontend sama-sama live, badge di halaman utama akan
-   otomatis berubah dari "Mode landing" menjadi "Backend terhubung".
+## 2. Deploy ke Vercel
+
+1. Push repo ini ke Git (GitHub/GitLab/dst).
+2. Di Vercel: **Add New → Project**, import repo ini.
+3. Framework preset: **Vite** (biasanya terdeteksi otomatis).
+4. Set environment variable:
+   - `VITE_API_URL` → URL backend Render kamu, mis.
+     `https://ilovepdf-clone-backend.onrender.com`
+5. Deploy. `vercel.json` sudah menangani SPA routing (semua path → `index.html`).
+6. Setelah dapat domain Vercel, update `CORS_ORIGIN` di backend Render dengan domain
+   ini lalu redeploy backend.
 
 ## Struktur
 
 ```
 src/
-  api.js              # helper fetch ke backend (pakai VITE_API_URL)
-  constants.js         # daftar format & mode konversi
-  pollAndDownload.js   # polling status job + auto-download hasil
-  App.jsx
-  components/
-    Navbar.jsx
-    Hero.jsx
-    ModeSelector.jsx
-    DropZone.jsx
-    JobQueue.jsx
-    Steps.jsx
-    Footer.jsx
-  styles/global.css    # design system (warna, font, komponen)
+  config/tools.js   metadata form tiap tool (field, label, default, pilihan)
+  api/client.js      pemanggil backend via axios (multipart/form-data)
+  views/Home.vue     grid semua tool
+  views/ToolView.vue form dinamis + hasil (download file / tampilkan JSON)
+vercel.json
 ```
