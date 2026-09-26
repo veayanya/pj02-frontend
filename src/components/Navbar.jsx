@@ -9,7 +9,14 @@ export default function Navbar() {
         <a href="#cara-pakai">Cara Pakai</a>
         <a href="#tutor-libreoffice">Instal LibreOffice</a>
         <a
-          href="https://ig-save-by-eva.vercel.app/"
+          href="https://github.com/veayanya/konversin-frontend"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://instasave-by-eva.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="nav-ig-btn"

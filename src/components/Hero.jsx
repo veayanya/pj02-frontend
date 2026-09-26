@@ -30,16 +30,34 @@ export default function Hero({ serverMode, tools, children }) {
       </h1>
       <p className="subtitle">
         Ubah PDF, Word, PowerPoint, HTML, dan EPUB langsung dari browser. Cepat, rapi, dan hasilnya siap pakai.
+        Dibuat oleh{" "}
+        <a
+          href="https://github.com/veayanya"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "var(--violet)", fontWeight: 700, textDecoration: "none" }}
+        >
+          Eva
+        </a>{" "}
+        ·{" "}
+        <a
+          href="https://github.com/veayanya/konversin-frontend"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "var(--ink-soft)", fontSize: 13, textDecoration: "none" }}
+        >
+          GitHub ↗
+        </a>
       </p>
 
       <a
-        href="https://ig-save-by-eva.vercel.app/"
+        href="https://instasave-by-eva.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
         className="ig-banner-link"
       >
         <span className="ig-banner-badge">REKOMENDASI</span>
-        <span>📸 Butuh pengunduh video Instagram? Buka <strong>IG Save by Eva</strong> &rarr;</span>
+        <span>📸 Butuh pengunduh video Instagram? Buka <strong>InstaSave by Eva</strong> &rarr;</span>
       </a>
 
       {children}
