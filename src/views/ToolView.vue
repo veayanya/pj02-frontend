@@ -4,7 +4,7 @@
   </div>
   <div v-else>
     <router-link to="/" class="back-link">← Semua Tool</router-link>
-    <h1 class="page-title">{{ tool.icon }} {{ tool.label }}</h1>
+    <h1 class="page-title"><span class="page-icon" v-html="getToolIcon(tool.key)"></span> {{ tool.label }}</h1>
     <p class="page-desc">{{ tool.description }}</p>
 
     <div class="panel">
@@ -90,6 +90,7 @@
 <script setup>
 import { computed, reactive, ref, watch } from "vue";
 import { getToolConfig } from "../config/tools.js";
+import { getToolIcon } from "../config/icons.js";
 import { runPdfTool } from "../api/client.js";
 
 const props = defineProps({ toolKey: { type: String, required: true } });

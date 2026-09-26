@@ -27,7 +27,7 @@
       :to="{ name: 'tool', params: { toolKey: tool.key } }"
       class="card"
     >
-      <div class="card-icon">{{ tool.icon }}</div>
+      <div class="card-icon" v-html="getToolIcon(tool.key)"></div>
       <div class="card-title">{{ tool.label }}</div>
       <div class="card-desc">{{ tool.description }}</div>
     </router-link>
@@ -60,4 +60,5 @@
 
 <script setup>
 import { TOOLS } from "../config/tools.js";
+import { getToolIcon } from "../config/icons.js";
 </script>

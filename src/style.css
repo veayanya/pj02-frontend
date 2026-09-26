@@ -138,12 +138,14 @@ h1 .grad {
   border-color: rgba(108,93,211,.3);
 }
 .card-icon {
-  width: 44px; height: 44px; border-radius: 12px;
-  display: grid; place-items: center;
-  background: var(--cloud); font-size: 22px;
+  width: 44px; height: 44px;
 }
+.card-icon svg { width: 44px; height: 44px; display: block; }
 .card-title { font-family: Sora, sans-serif; font-weight: 700; margin-top: 14px; font-size: 15px; }
 .card-desc { font-size: 13px; color: var(--ink-soft); margin-top: 6px; line-height: 1.6; }
+
+.page-icon { display: inline-flex; width: 34px; height: 34px; vertical-align: middle; }
+.page-icon svg { width: 34px; height: 34px; display: block; }
 
 /* ─── HALAMAN TOOL ─── */
 .page-title {
