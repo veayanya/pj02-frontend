@@ -8,7 +8,7 @@
       <router-link
         v-for="tool in TOOLS"
         :key="tool.key"
-        :to="{ name: 'tool', params: { key: tool.key } }"
+        :to="{ name: 'tool', params: { toolKey: tool.key } }"
         class="card"
       >
         <div class="card-icon">{{ tool.icon }}</div>

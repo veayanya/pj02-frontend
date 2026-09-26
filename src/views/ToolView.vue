@@ -91,9 +91,9 @@ import { computed, reactive, ref, watch } from "vue";
 import { getToolConfig } from "../config/tools.js";
 import { runPdfTool } from "../api/client.js";
 
-const props = defineProps({ key: { type: String, required: true } });
+const props = defineProps({ toolKey: { type: String, required: true } });
 
-const tool = computed(() => getToolConfig(props.key));
+const tool = computed(() => getToolConfig(props.toolKey));
 const selectedFiles = ref([]);
 const sourceUrl = ref("");
 const loading = ref(false);
@@ -114,7 +114,7 @@ function buildDefaultFormValues() {
   });
 }
 
-watch(() => props.key, buildDefaultFormValues, { immediate: true });
+watch(() => props.toolKey, buildDefaultFormValues, { immediate: true });
 
 const visibleFields = computed(() => {
   if (!tool.value) return [];

@@ -6,7 +6,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: "/", name: "home", component: Home },
-    { path: "/tool/:key", name: "tool", component: ToolView, props: true },
+    { path: "/tool/:toolKey", name: "tool", component: ToolView, props: true },
   ],
 });
 
