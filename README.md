@@ -1,9 +1,9 @@
-# iLovePDF Clone — Frontend (Vue 3 + Vite)
+# Konversin — Frontend (Vue 3 + Vite)
 
 UI untuk 24 tool PDF (merge, split, compress, watermark, rotate, protect, unlock,
 repair, PDF↔JPG, image→PDF, office→PDF, html→PDF, PDF/A, OCR, extract text,
 markdown, translate, summarize, form detect, edit & sign). Semua pemrosesan file
-dilakukan oleh backend terpisah (Node/Express) yang memanggil iLovePDF API — frontend
+dilakukan oleh backend terpisah (Node/Express) yang memanggil API pemrosesan PDF — frontend
 ini tidak pernah menyimpan API key.
 
 Deploy target: **Vercel**.
@@ -28,7 +28,7 @@ origin frontend ini.
 3. Framework preset: **Vite** (biasanya terdeteksi otomatis).
 4. Set environment variable:
    - `VITE_API_URL` → URL backend Render kamu, mis.
-     `https://ilovepdf-clone-backend.onrender.com`
+     `https://konversin-backend.onrender.com`
 5. Deploy. `vercel.json` sudah menangani SPA routing (semua path → `index.html`).
 6. Setelah dapat domain Vercel, update `CORS_ORIGIN` di backend Render dengan domain
    ini lalu redeploy backend.

@@ -3,7 +3,7 @@
     <p>Tool tidak ditemukan. <router-link to="/">Kembali</router-link></p>
   </div>
   <div v-else>
-    <router-link to="/" class="back-link">← Semua tool</router-link>
+    <router-link to="/" class="back-link">← Semua Tool</router-link>
     <h1 class="page-title">{{ tool.icon }} {{ tool.label }}</h1>
     <p class="page-desc">{{ tool.description }}</p>
 
@@ -75,7 +75,8 @@
       </div>
 
       <button class="btn" :disabled="loading || !canSubmit" @click="submit">
-        {{ loading ? "Memproses..." : "Jalankan" }}
+        <span v-if="loading" class="spinner"></span>
+        <span>{{ loading ? "Memproses..." : "Jalankan" }}</span>
       </button>
     </div>
 

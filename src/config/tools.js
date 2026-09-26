@@ -1,6 +1,6 @@
 // Definisi setiap tool: field-field opsi dipetakan langsung menjadi
-// payload JSON yang dikirim backend ke iLovePDF /process (lihat nama-nama
-// opsi di dokumentasi https://developer.ilovepdf.com/docs).
+// payload JSON yang dikirim backend ke API pemrosesan PDF (lihat nama-nama
+// opsi pada dokumentasi API pemrosesan PDF yang dipakai backend).
 //
 // tipe field yang didukung ToolView.vue: text, number, select, checkbox, color, textarea
 
@@ -403,7 +403,7 @@ export const TOOLS = [
   {
     key: "editpdf",
     label: "Edit PDF (lanjutan)",
-    description: "Tambahkan elemen (teks/gambar) ke PDF lewat data JSON mentah sesuai dokumentasi iLovePDF.",
+    description: "Tambahkan elemen (teks/gambar) ke PDF lewat data JSON mentah sesuai dokumentasi API pemrosesan PDF.",
     icon: "✍️",
     inputType: "file",
     multiple: false,
@@ -412,7 +412,7 @@ export const TOOLS = [
     fields: [
       {
         name: "elements",
-        label: "elements (JSON array, lihat dokumentasi iLovePDF)",
+        label: "elements (JSON array, lihat dokumentasi API)",
         type: "textarea",
         default: "[]",
         json: true,
@@ -422,7 +422,7 @@ export const TOOLS = [
   {
     key: "sign",
     label: "Tanda Tangan PDF (lanjutan)",
-    description: "Kirim permintaan tanda tangan lewat data JSON mentah sesuai dokumentasi iLovePDF.",
+    description: "Kirim permintaan tanda tangan lewat data JSON mentah sesuai dokumentasi API pemrosesan PDF.",
     icon: "🖊️",
     inputType: "file",
     multiple: false,
@@ -432,7 +432,7 @@ export const TOOLS = [
     fields: [
       {
         name: "signers",
-        label: "signers (JSON array, lihat dokumentasi iLovePDF)",
+        label: "signers (JSON array, lihat dokumentasi API)",
         type: "textarea",
         default: "[]",
         json: true,
